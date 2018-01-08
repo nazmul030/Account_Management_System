@@ -50,7 +50,8 @@ include('admin_sidebar.php');
                             <td><?php echo number_format($results->ProjectIncome);?></td>
                             <td><?php echo number_format($results->ProjectIncome - $results->ProjectExpense);?></td>
                             <td>
-                              <a class="btn btn-outline-info" href="<?php echo base_url();?>Add_Project_Controller/Edit_Current_Project/<?php echo $results->Id;?>">Edit</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-info btn-sm" href="<?php echo base_url();?>Add_Project_Controller/Edit_Current_Project/<?php echo $results->Id;?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</a>
                               <a class="btn btn-outline-danger " href="<?php echo base_url();?>Add_Project_Controller/Close_Current_Project/<?php echo $results->Id;?>" onclick="ConfirmClose()">Close</a>
                                <a class="btn btn-outline-dark margin-top" href="<?php echo base_url();?>Add_Project_Controller/Withdraw_Expense_From_Current_Project/<?php echo $results->Id;?>">Expense</a>
                                 <a class="btn btn-outline-secondary margin-top" href="<?php echo base_url(); ?>Add_Project_Controller/View_Expense_List_Of_A_Project?pro_id=<?php echo $results->Id;?>">Expense History</a>

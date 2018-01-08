@@ -48,9 +48,11 @@ include('admin_sidebar.php');
                             <td><?php echo $results->ContactNo1;?></td>
                             <td><?php echo $results->ContactNo2;?></td>
                             <td>
-                              <a class="btn btn-outline-info" href="<?php echo base_url();?>Account_Controller/View_Specific_Account/<?php echo $results->Id;?>">Edit</a>
-                              <a class="btn btn-outline-dark margin-top" href="<?php echo base_url();?>Account_Controller/Get_Specific_Acc_Deposit_History?acc_no=<?php echo $results->AccountNumber;?>">Deposit History</a>
-                              <a class="btn btn-outline-success margin-top" href="<?php echo base_url();?>Account_Controller/Get_Specific_Acc_Withdraw_History?acc_no=<?php echo $results->AccountNumber;?>">Withdraw History</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-info btn-sm" href="<?php echo base_url();?>Account_Controller/View_Specific_Account/<?php echo $results->Id;?>"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                              <a data-toggle="tooltip" data-placement="top" title="Deposit History" class="btn btn-info btn-sm" href="<?php echo base_url();?>Account_Controller/Get_Specific_Acc_Deposit_History?acc_no=<?php echo $results->AccountNumber;?>"><i class="fa fa-history" aria-hidden="true"></i>
+</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Withdraw History" class="btn btn-success btn-sm margin-top" href="<?php echo base_url();?>Account_Controller/Get_Specific_Acc_Withdraw_History?acc_no=<?php echo $results->AccountNumber;?>"><i class="fa fa-history" aria-hidden="true"></i>
+</a>
                             </td>
                           <?php }
                          }
