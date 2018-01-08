@@ -50,10 +50,12 @@ include('admin_sidebar.php');
                             <td><?php echo $results->Address;?></td>
                             <td><?php echo $results->Remark;?></td>
                             <td>
-                              <a class="btn btn-outline-info " href="<?php echo base_url();?>Liability_Controller/View_Specific_Liability/<?php echo $results->Id;?>">Edit</a>
-                                <a class="btn btn-danger " href="<?php echo base_url();?>Liability_Controller/Close_Current_Liability/<?php echo $results->Id;?>">Close</a>
-                              <a class="btn btn-outline-secondary margin-top" href="<?php echo base_url();?>Liability_Controller/Get_Paidback_List_Of_A_Liability/<?php echo $results->Id;?>">Paid Back List</a>
-                              <a class="btn btn-outline-success margin-top" href="<?php echo base_url();?>Liability_Controller/Get_Received_List_Of_A_Liability/<?php echo $results->Id;?>">Received List</a>
+                                <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-info btn-sm" href="<?php echo base_url();?>Liability_Controller/View_Specific_Liability/<?php echo $results->Id;?>"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>
+                                <a data-toggle="tooltip" data-placement="top" title="Close" class="btn btn-danger btn-sm" href="<?php echo base_url();?>Liability_Controller/Close_Current_Liability/<?php echo $results->Id;?>"><i class="fa fa-times-circle" aria-hidden="true"></i>
+</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Paid Back List" class="btn btn-info btn-sm margin-top" href="<?php echo base_url();?>Liability_Controller/Get_Paidback_List_Of_A_Liability/<?php echo $results->Id;?>"><i class="fa fa-list-alt" aria-hidden="true"></i>
+</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Recieved List" class="btn btn-success btn-sm margin-top" href="<?php echo base_url();?>Liability_Controller/Get_Received_List_Of_A_Liability/<?php echo $results->Id;?>"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                             
                             </td>
                           <?php }
