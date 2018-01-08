@@ -48,8 +48,10 @@ include('admin_sidebar.php');
                             <td><?php echo $results->ProjectName;?></td>
                             <td><?php echo $results->Remark;?></td>
                             <td>
-                              <a class="btn btn-outline-info" href="<?php echo base_url();?>Add_Project_Controller/Edit_Specific_Asset/<?php echo $results->Id;?>">Edit</a>
-                              <a class="btn btn-outline-danger margin-top" href="<?php echo base_url();?>Add_Project_Controller/Close_Current_Asset/<?php echo $results->Id;?>" onclick="ConfirmClose()">Delete</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-info btn-sm" href="<?php echo base_url();?>Add_Project_Controller/Edit_Specific_Asset/<?php echo $results->Id;?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+</a>
+                              <a data-toggle="tooltip" data-placement="top" title="Delete" class="btn btn-danger btn-sm margin-top" href="<?php echo base_url();?>Add_Project_Controller/Close_Current_Asset/<?php echo $results->Id;?>" onclick="ConfirmClose()"><i class="fa fa-trash-o" aria-hidden="true"></i>
+</a>
                             </td>
                           <?php
                               }
